@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Base_Configuration>
+            <version>0.0.1</version>
+        </Base_Configuration>
+    </modules>
+    <global>
+        <!--<skip_process_modules_updates>1</skip_process_modules_updates>-->
+        <models>
+           <base_configuration>
+               <class>Base_Configuration_Model</class>
+           </base_configuration>
+       </models>
+        <resources>
+            <anythinng>
+                <setup>
+                    <module>Base_Configuration</module>
+                </setup>
+            </anythinng>
+        </resources>
+    </global>
+    <default>
+        <web>
+            <routers>
+                <my_route>
+                    <class>Base_Configuration_Controllers_MyRoute</class>
+                    <area>frontend</area>
+                </my_route>
+            </routers>
+        </web>
+    </default>
+    <!-- Loading route for french store -->
+    <stores>
+       <french>
+        <web>
+            <routers>
+                <my_french_route>
+                    <class>Base_Configuration_Controllers_MyFrenchRoute</class>
+                    <area>frontend</area>
+                </my_french_route>
+            </routers>
+        </web>
+    </french>
+    </stores>
+</config>
