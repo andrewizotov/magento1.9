@@ -2,19 +2,20 @@
 <config>
     <modules>
         <Base_Configuration>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </Base_Configuration>
     </modules>
     <global>
         <!--<skip_process_modules_updates>1</skip_process_modules_updates>-->
         <models>
-           <base_configuration>
-               <class>Base_Configuration_Model</class>
-           </base_configuration>
-       </models>
+            <base_configuration>
+                <class>Base_Configuration_Model</class>
+            </base_configuration>
+        </models>
         <resources>
             <anythinng>
                 <setup>
+                    <class>Mage_Eav_Model_Entity_Setup</class>
                     <module>Base_Configuration</module>
                 </setup>
             </anythinng>
@@ -32,15 +33,26 @@
     </default>
     <!-- Loading route for french store -->
     <stores>
-       <french>
-        <web>
-            <routers>
-                <my_french_route>
-                    <class>Base_Configuration_Controllers_MyFrenchRoute</class>
-                    <area>frontend</area>
-                </my_french_route>
-            </routers>
-        </web>
-    </french>
+        <french>
+            <web>
+                <routers>
+                    <my_french_route>
+                        <class>Base_Configuration_Controllers_MyFrenchRoute</class>
+                        <area>frontend</area>
+                    </my_french_route>
+                </routers>
+            </web>
+        </french>
     </stores>
+    <frontend>
+        <routers>
+            <french_contacts>
+                <use>my_french_route</use>
+                <args>
+                    <module>Base_Configuration</module>
+                    <frontName>french_shop</frontName>
+                </args>
+            </french_contacts>
+        </routers>
+    </frontend>
 </config>

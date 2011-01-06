@@ -30,7 +30,7 @@
             </default_setup>
         </resources>
         <session_save><![CDATA[files]]></session_save>
-        <cache>
+       <!-- <cache>
             <backend>Cm_Cache_Backend_Redis</backend>
             <backend_options>
                 <server>127.0.0.1</server>
@@ -48,7 +48,7 @@
                 <compression_lib>gzip</compression_lib>
                 <use_lua>0</use_lua>
             </backend_options>
-        </cache>
+        </cache>-->
         <redis_session>                       <!-- All options seen here are the defaults -->
             <host>127.0.0.1</host>            <!-- Specify an absolute path if using a unix socket -->
             <port>6379</port>

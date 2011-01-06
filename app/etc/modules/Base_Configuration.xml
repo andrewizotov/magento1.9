@@ -4,9 +4,6 @@
         <Base_Configuration>
             <codePool>local</codePool>
             <active>true</active>
-            <!--<depends>
-                <Phoenix_Moneybookers />
-            </depends>-->
         </Base_Configuration>
     </modules>
 </config>
