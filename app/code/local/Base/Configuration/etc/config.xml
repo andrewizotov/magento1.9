@@ -20,6 +20,24 @@
                 </setup>
             </anythinng>
         </resources>
+        <!--<rewrite>
+            <my_redirect>
+                <from>/customer\/account\/login/</from>
+                <to>customer/account/create</to>
+                <complete/>
+            </my_redirect>
+        </rewrite>-->
+        <routers> <!-- this is possible after dispatching in Mage_Core_Controller_Varien_Action preDispatch -->
+            <customer>
+                <rewrite>
+                    <account>
+                        <actions>
+                            <edit><to>my_french_shop/show_products/index</to></edit>
+                        </actions>
+                    </account>
+                </rewrite>
+            </customer>
+        </routers>
     </global>
     <default>
         <web>
@@ -46,11 +64,19 @@
     </stores>
     <frontend>
         <routers>
+            <!-- extend controller/action load before then -->
+            <customer>
+                <args>
+                    <modules>
+                        <anything before="Mage_Customer">Base_Configuration</anything>
+                    </modules>
+                </args>
+            </customer>
             <french_contacts>
                 <use>my_french_route</use>
                 <args>
                     <module>Base_Configuration</module>
-                    <frontName>french_shop</frontName>
+                    <frontName>my_french_shop</frontName>
                 </args>
             </french_contacts>
         </routers>
