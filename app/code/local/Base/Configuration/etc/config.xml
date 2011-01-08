@@ -22,7 +22,7 @@
         </resources>
         <!--<rewrite>
             <my_redirect>
-                <from>/customer\/account\/login/</from>
+                <from>/catalog\/category\/view\/id\/9/</from>
                 <to>customer/account/create</to>
                 <complete/>
             </my_redirect>
