@@ -64,6 +64,16 @@
         </french>
     </stores>
     <frontend>
+        <events>
+            <controller_front_send_response_before>
+                <observers>
+                    <my_observers>
+                        <class>Base_Configuration_Model_Observer</class>
+                        <method>test</method>
+                    </my_observers>
+                </observers>
+            </controller_front_send_response_before>
+        </events>
         <routers>
             <!-- extend controller/action load before then -->
             <customer>
