@@ -38,6 +38,7 @@
                 </rewrite>
             </customer>
         </routers>
+
     </global>
     <default>
         <web>
