@@ -5,6 +5,18 @@
             <version>0.0.1</version>
         </Base_Configuration2>
     </modules>
+    <global>
+        <models>
+            <base_configuration2>
+                <class>Base_Configuration2_Model</class>
+            </base_configuration2>
+            <base_configuration>
+                <rewrite>
+                    <Test>Base_Configuration2_Model_Test</Test>
+                </rewrite>
+            </base_configuration>
+        </models>
+    </global>
     <frontend>
         <routers>
             <!-- extend controller/action load before then -->

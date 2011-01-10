@@ -6,9 +6,13 @@ require_once $mageFilename;
 
 umask(0);
 
-Mage::init('default','store');
+Mage::app();
 
-$account  = Mage::getModel('catalog/product');
+
+$baseTest  = Mage::getModel('base_configuration/Test');
+
+echo get_class($baseTest)."\n";
+
 
 
 
