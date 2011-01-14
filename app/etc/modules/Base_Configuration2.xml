@@ -4,9 +4,8 @@
         <Base_Configuration2>
             <codePool>local</codePool>
             <active>true</active>
-            <!--<depends>
-                <Mage_Customer/>
-            </depends>-->
+            <depends>
+            </depends>
         </Base_Configuration2>
     </modules>
 </config>

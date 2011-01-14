@@ -20,13 +20,14 @@
     <frontend>
         <routers>
             <!-- extend controller/action load before then -->
-            <customer> <!-- custome/account/index extended here and in Base_Coonfiguration before  -->
+            <!-- custome/account/index extended here and in Base_Coonfiguration before  -->
+            <!--<customer>
                 <args>
                     <modules>
                         <anything2 before="Base_Configuration">Base_Configuration2</anything2>
                     </modules>
-                </args>
-            </customer>
+                </args>1
+            </customer>-->
         </routers>
     </frontend>
 </config>

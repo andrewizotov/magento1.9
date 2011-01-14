@@ -29,6 +29,6 @@ media/*
 .phpstorm.meta.php
 .idea/
 .modman
-
+dump.rdb
 # Don't commit composer dependencies:
 composer/

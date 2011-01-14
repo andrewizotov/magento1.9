@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout>
+    <default>
+       <reference name="head">
+           <action method="addJs"><name>certification_basic/basic.js</name></action>
+           <action method="addCss"><name>css/certification_basic/basic.css</name></action>
+           <action method="addItem"><type>skin_css</type><name>css/certification_basic/basic.css</name></action>
+           <action method="addItem"><type>js_css</type><name>certification_basic/css.css</name></action>
+           <action method="addItem"><type>skin_js</type><name>js/rwd_js.js</name></action>
+       </reference>
+    </default>
+</layout>

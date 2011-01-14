@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <config>
     <modules>
-        <Base_Configuration>
+        <Certification_Basic>
             <codePool>local</codePool>
             <active>true</active>
-        </Base_Configuration>
+        </Certification_Basic>
     </modules>
 </config>
