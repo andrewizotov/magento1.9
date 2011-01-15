@@ -6,9 +6,43 @@
         </Certification_Basic>
     </modules>
     <global>
-
+        <models>
+            <catalog>
+                <rewrite>
+                    <product>Certification_Basic_Model_Catalog_Product</product>
+                </rewrite>
+            </catalog>
+            <certification_basic>
+                <class>Certification_Basic_Model</class>
+                <!--<resourceModel></resourceModel>-->
+            </certification_basic>
+        </models>
     </global>
+    <crontab>
+        <jobs>
+            <write_in_log_message3>
+                <schedule>
+                    <cron_expr>*/50 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>certification_basic/cron::send</model>
+                </run>
+            </write_in_log_message3>
+        </jobs>
+    </crontab>
     <frontend>
+        <events>
+            <controller_action_layout_render_before_catalog_category_view>
+                <observers>
+                    <certif_basic>
+                        <type>model</type>
+                        <class>certification_basic/observer</class>
+                        <method>layoutRenderBeforeCatalogCategoryView</method>
+                        <args></args>
+                    </certif_basic>
+                </observers>
+            </controller_action_layout_render_before_catalog_category_view>
+        </events>
         <layout>
             <updates>
                 <certification>
