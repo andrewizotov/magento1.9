@@ -31,7 +31,33 @@
         </jobs>
     </crontab>
     <frontend>
+        <routers>
+            <certif_basic>
+                <use>standard</use>
+                <args>
+                    <module>Certification_Basic</module>
+                    <frontName>trans</frontName>
+                </args>
+            </certif_basic>
+        </routers>
+        <translate>
+            <modules>
+                <Certification_Basic>
+                    <files>
+                        <default>Certification_Basic.csv</default>
+                    </files>
+                </Certification_Basic>
+            </modules>
+        </translate>
         <events>
+            <catalog_product_load_before>
+                <observers>
+                    <certification>
+                        <class>certification_basic/observer</class>
+                        <method>catalogProductLoadBefore</method>
+                    </certification>
+                </observers>
+            </catalog_product_load_before>
             <controller_action_layout_render_before_catalog_category_view>
                 <observers>
                     <certif_basic>
@@ -51,4 +77,29 @@
             </updates>
         </layout>
     </frontend>
+    <adminhtml>
+        <events>
+            <catalog_product_delete_after_done>
+                <observers>
+                    <certif_save_product>
+                        <type>model</type>
+                        <class>certification_basic/observer</class>
+                        <method>deleteProductAfterDone</method>
+                    </certif_save_product>
+                </observers>
+            </catalog_product_delete_after_done>
+        </events>
+    </adminhtml>
+    <stores>
+        <german>
+            <general>
+                <country>
+                    <default>UA</default>
+                </country>
+                <store_information>
+                    <name>My Shope</name>
+                </store_information>
+            </general>
+        </german>
+    </stores>
 </config>

@@ -149,6 +149,88 @@ II - Magento configuration
    }
 
 6) Set up a cron job
+   <crontab>
+           <jobs>
+               <write_in_log_message3>
+                   <schedule>
+                       <cron_expr>*/50 * * * *</cron_expr>
+                   </schedule>
+                   <run>
+                       <model>certification_basic/cron::send</model>
+                   </run>
+               </write_in_log_message3>
+           </jobs>
+    </crontab>
+
+7 ) How does the framework discover active modules and their
+     configuration?
+     1. config->loadModules()
+        =>
+          1. config->_loadDeclaredModules();
+             =>
+             1. $this->_getDeclaredModuleFiles(); [base,mage,custom]
+          2. config->loadModulesConfiguration
+             => if ($module->is('active')) {
+
+8)  What are the common methods with which the framework accesses its
+    configuration values and areas?
+    $config->getNode(patch, scope, scopeCode),
+    Mage::getStoreConfig()
+
+9) How are per-store configuration values established in the XML DOM?
+  <stores>
+          <german>
+              <general>
+                  <country>
+                      <default>UA</default>
+                  </country>
+                  <store_information>
+                      <name>My Shope</name>
+                  </store_information>
+              </general>
+          </german>
+      </stores>
+
+10) By what process do the factory methods and autoloader enable class
+    instantiation?
+    $config->getModelInstance : will do new $class
+    1. $className = $this->getModelClassName($modelClass);
+    2. new $className
+
+11) Which class types have configured prefixes, and how does this relate to
+    class overrides?
+    Mage_Core_Model_
+12) Which class types and files have explicit paths?
+    Varien_
+
+13) What configuration parameters are available for event observers?
+    <type> model/object </type> <class>namespace_module/mymodel</class><class>Namespace_Module_Model_MyModel</class>
+    <args/> <method/>
+
+14) What are the interface and configuration options for automatically fired
+    events?
+    $_eventPrefix, $_eventObject, $observer->getEvent()->getObject()
+
+15) What is the structure of event observers, and how are properties
+    accessed therein?
+    Mage::dispatchEvent($eventName,$args);
+    $observer->getEvent()->getObject(), $observer->getEventName();
+
+16) What configuration parameters are available for cron jobs?
+    schedule->config_path, ->schedule->cron_expr
+    <crontab>
+                <jobs>
+                    <write_in_log_message3>
+                        <schedule>
+                            <cron_expr>*/50 * * * *</cron_expr>
+                        </schedule>
+                        <run>
+                            <model>certification_basic/cron::send</model>
+                        </run>
+                    </write_in_log_message3>
+                </jobs>
+     </crontab>
+
 
 
 

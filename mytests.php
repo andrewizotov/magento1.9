@@ -9,9 +9,11 @@ umask(0);
 Mage::app();
 
 
-$baseTest  = Mage::getModel('base_configuration/Test');
+$baseTest  = Mage::getModel('Pelago_Emogrifier');
+//$product  =  Mage::app()->getConfig()->getModelInstance('catalog/product');
+var_dump(get_class($baseTest));
 
-echo get_class($baseTest)."\n";
+//echo get_class($baseTest)."\n";
 
 
 
