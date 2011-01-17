@@ -18,6 +18,15 @@
         </models>
     </global>
     <frontend>
+        <translate>
+            <modules>
+                <base_configuration2>
+                    <files>
+                        <base2>base_configuration2.csv</base2>
+                    </files>
+                </base_configuration2>
+            </modules>
+        </translate>
         <routers>
             <!-- extend controller/action load before then -->
             <!-- custome/account/index extended here and in Base_Coonfiguration before  -->

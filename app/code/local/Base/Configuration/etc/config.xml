@@ -64,6 +64,15 @@
         </french>
     </stores>
     <frontend>
+        <translate>
+            <modules>
+                <base_configuration>
+                    <files>
+                        <base1>base_configuration1.csv</base1>
+                    </files>
+                </base_configuration>
+            </modules>
+        </translate>
         <events>
             <controller_front_send_response_before>
                 <observers>
@@ -91,6 +100,13 @@
                     <frontName>my_french_shop</frontName>
                 </args>
             </french_contacts>
+            <configuration>
+                <use>standard</use>
+                <args>
+                   <module>Base_Configuration</module>
+                   <frontName>tran</frontName>
+                </args>
+            </configuration>
         </routers>
     </frontend>
 </config>

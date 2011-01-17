@@ -4,10 +4,6 @@ class Certification_Basic_TranslateController extends Mage_Core_Controller_Front
 {
     public function testAction()
     {
-        $this->loadLayout();
-        echo '/ '.$this->__('my module').' /';
-        $this->renderLayout();
-
-
+        echo '/ '.$this->__('my word').' /';
     }
 }

@@ -230,8 +230,44 @@ II - Magento configuration
                     </write_in_log_message3>
                 </jobs>
      </crontab>
+----------------------------------------------------------------------------------------------------------------------
+||| Internationalization
 
+1) Describe the use of Magento translate classes and translate files
 
+   Magenoto use class "Mage_Core_Model_Translations"
+   Files in app/locale, in theme app/design/frontend/Package/Theme/locale/en_US/translate.csv
+   and database table 'core_translate'
 
+2) Describe the advantages and disadvantages of using subdomains and subdirectories
+   in internationalization
+   ????
 
+3) Which method is used for translating strings, and on which types of
+   objects is it generally available?
+
+   function __(){} - available in block, controller, helper
+
+4) In what way does the developer mode influence how Magento handles
+   translations?
+
+   When magento adding translation and developer mode is enabled
+  /**
+   * Not allow use translation not related to module
+   */
+   if (Mage::getIsDeveloperMode()) {
+       unset($this->_data[$key]);
+   }
+
+5) How many options exist to add a custom translation for any given
+   string?
+
+   in app/locale, in app/design/frontend/package/theme/locale/en_US/translate.csv , and in database
+
+6) What is the priority of translation options?
+
+   first loading from app/locale, than from themes , and database (high priority)
+
+7) How are translation conflicts (when two modules translate the same
+   string) processed by Magento?
 
