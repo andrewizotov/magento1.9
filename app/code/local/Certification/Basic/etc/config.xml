@@ -20,14 +20,30 @@
     </global>
     <crontab>
         <jobs>
+            <write_in_log_def>
+                <schedule>
+                    <config_path>crontab/jobs/write_in_log_def/schedule/cron_expr</config_path>
+                </schedule>
+                <run>
+                    <model>certification_basic/cron::sendDef</model>
+                </run>
+            </write_in_log_def>
             <write_in_log_message3>
                 <schedule>
-                    <cron_expr>*/50 * * * *</cron_expr>
+                    <cron_expr>*/1 * * * *</cron_expr>
                 </schedule>
                 <run>
                     <model>certification_basic/cron::send</model>
                 </run>
             </write_in_log_message3>
+            <write_in_log_message2>
+                <schedule>
+                    <cron_expr>always</cron_expr>
+                </schedule>
+                <run>
+                    <model>certification_basic/cron::sendAlways</model>
+                </run>
+            </write_in_log_message2>
         </jobs>
     </crontab>
     <frontend>

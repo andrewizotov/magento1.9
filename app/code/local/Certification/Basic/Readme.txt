@@ -271,3 +271,4 @@ II - Magento configuration
 7) How are translation conflicts (when two modules translate the same
    string) processed by Magento?
 
+   first loaded module will translate string
