@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Certification_RequestFlow>
+            <version>1.0</version>
+        </Certification_RequestFlow>
+    </modules>
+    <global>
+    </global>
+    <frontend>
+        <routers>
+            <checkout>
+                <args>
+                  <modules>
+                      <requestflow before="Mage_Checkout">Certification_RequestFlow_Checkout</requestflow>
+                  </modules>
+                </args>
+            </checkout>
+            <certification_requestflow>
+                <use>standard</use>
+                <args>
+                    <module>Certification_RequestFlow</module>
+                    <frontName>flow</frontName>
+                </args>
+            </certification_requestflow>
+        </routers>
+        <layout>
+            <updates>
+                <simple>
+                   <file>simple_controller.xml</file>
+                </simple>
+            </updates>
+        </layout>
+    </frontend>
+</config>

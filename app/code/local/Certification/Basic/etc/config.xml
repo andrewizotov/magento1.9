@@ -6,6 +6,11 @@
         </Certification_Basic>
     </modules>
     <global>
+        <blocks>
+            <certification_basic>
+                <class>Certification_Basic_Block</class>
+            </certification_basic>
+        </blocks>
         <models>
             <catalog>
                 <rewrite>
@@ -118,4 +123,16 @@
             </general>
         </german>
     </stores>
+    <default>
+        <payment>
+            <paymentnew>
+                <active>1</active>
+                <model>certification_basic/paymentnew</model>
+                <order_status>processing</order_status>
+                <title>Payment New</title>
+                <currency>USD</currency>
+                <group>offline</group>
+            </paymentnew>
+        </payment>
+    </default>
 </config>

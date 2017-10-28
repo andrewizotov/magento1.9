@@ -4,6 +4,10 @@
         <Base_Configuration>
             <codePool>local</codePool>
             <active>true</active>
+            <!-- this is will made CartController in  Certification_RequestFlow dispatched first -->
+            <!--<depends>
+                <Certification_RequestFlow/>
+            </depends>-->
         </Base_Configuration>
     </modules>
 </config>

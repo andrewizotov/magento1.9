@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<layout>
+    <certification_requestflow_simple_index>
+        <!--<remove name="footer"/>
+        <remove name="header"/>-->
+        <!--<reference name="after_body_start">
+            <block type="core/text">
+                <action method="setText"><text>TEST!!!!</text></action>
+            </block>
+        </reference>-->
+    </certification_requestflow_simple_index>
+</layout>

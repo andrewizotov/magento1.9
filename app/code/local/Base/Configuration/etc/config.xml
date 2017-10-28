@@ -22,7 +22,7 @@
         </resources>
         <!--<rewrite>
             <my_redirect>
-                <from>/catalog\/category\/view\/id\/9/</from>
+                <from>/catalog\/category\/view\/id\/10/</from>
                 <to>customer/account/create</to>
                 <complete/>
             </my_redirect>
@@ -38,7 +38,6 @@
                 </rewrite>
             </customer>
         </routers>
-
     </global>
     <default>
         <web>
@@ -107,6 +106,13 @@
                    <frontName>tran</frontName>
                 </args>
             </configuration>
+            <checkout>
+                <args>
+                    <modules>
+                        <configure before="Mage_Checkout">Base_Configuration</configure>
+                    </modules>
+                </args>
+            </checkout>
         </routers>
     </frontend>
 </config>
