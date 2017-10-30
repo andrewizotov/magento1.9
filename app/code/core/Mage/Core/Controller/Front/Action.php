@@ -59,7 +59,7 @@ class Mage_Core_Controller_Front_Action extends Mage_Core_Controller_Varien_Acti
 
     /**
      * Predispatch: should set layout area
-     *
+     *1
      * @return Mage_Core_Controller_Front_Action
      */
     public function preDispatch()
